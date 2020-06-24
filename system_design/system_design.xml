@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemDesign>
+    <Module name="aa" id="Te_ModuleIdentify_aa">
+        <StateCount>TE_aa_STATE_COUNT</StateCount>
+        <StateJumpMap/>
+        <StateManagerList>
+            <StateManager name="" id="TE_aa_STATE_">
+                <FinishDest/>
+                <ExceptDest/>
+                <StateBeginTask/>
+                <StateException>
+                    <StateDest/>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel/>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="idle" id="TE_aa_STATE_idle">
+                <FinishDest>TE_aa_STATE_</FinishDest>
+                <ExceptDest>TE_aa_STATE_</ExceptDest>
+                <StateBeginTask>NULL</StateBeginTask>
+                <StateException>
+                    <StateDest>TE_aa_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count="2">
+                        <BusinessException>
+                            <BusinessCheck>faa_be1</BusinessCheck>
+                            <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                            <Result>Te_WorkReuslt_Succ</Result>
+                        </BusinessException>
+                        <BusinessException>
+                            <BusinessCheck>faa_be2</BusinessCheck>
+                            <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                            <Result>Te_WorkReuslt_Succ</Result>
+                        </BusinessException>
+                    </BusinessExceptionList>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_Negotiating" step_count="2">
+                    <CooperateStep step_id="0" buff_count="1">
+                        <StateDepend depend_module_id="Te_ModuleIdentify_bb"/>
+                    </CooperateStep>
+                    <CooperateStep step_id="new item" buff_count="1">
+                        <StateDepend/>
+                    </CooperateStep>
+                </StateCooperate>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="init" id="TE_aa_STATE_init">
+                <FinishDest>TE_aa_STATE_</FinishDest>
+                <ExceptDest>TE_aa_STATE_</ExceptDest>
+                <StateBeginTask/>
+                <StateException>
+                    <StateDest>TE_aa_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="ready" id="TE_aa_STATE_ready">
+                <FinishDest>TE_aa_STATE_</FinishDest>
+                <ExceptDest>TE_aa_STATE_</ExceptDest>
+                <StateBeginTask/>
+                <StateException>
+                    <StateDest>TE_aa_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="cook" id="TE_aa_STATE_cook">
+                <FinishDest>TE_aa_STATE_</FinishDest>
+                <ExceptDest>TE_aa_STATE_</ExceptDest>
+                <StateBeginTask/>
+                <StateException>
+                    <StateDest>TE_aa_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+        </StateManagerList>
+        <DefaultState>TE_aa_STATE_idle</DefaultState>
+    </Module>
+    <Module name="bb" id="Te_ModuleIdentify_bb">
+        <StateCount>TE_bb_STATE_COUNT</StateCount>
+        <StateJumpMap/>
+        <StateManagerList>
+            <StateManager name="" id="TE_bb_STATE_">
+                <FinishDest/>
+                <ExceptDest/>
+                <StateBeginTask/>
+                <StateException>
+                    <StateDest/>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel/>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="idle" id="TE_bb_STATE_idle">
+                <FinishDest>TE_bb_STATE_</FinishDest>
+                <ExceptDest>TE_bb_STATE_</ExceptDest>
+                <StateBeginTask>NULL</StateBeginTask>
+                <StateException>
+                    <StateDest>TE_bb_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count="2">
+                        <BusinessException>
+                            <BusinessCheck>faa_be1</BusinessCheck>
+                            <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                            <Result>Te_WorkReuslt_Succ</Result>
+                        </BusinessException>
+                        <BusinessException>
+                            <BusinessCheck>faa_be2</BusinessCheck>
+                            <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                            <Result>Te_WorkReuslt_Succ</Result>
+                        </BusinessException>
+                    </BusinessExceptionList>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_Negotiating" step_count="1">
+                    <CooperateStep step_id="0" buff_count="1">
+                        <StateDepend depend_module_id="Te_ModuleIdentify_bb"/>
+                    </CooperateStep>
+                </StateCooperate>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="" id="TE_bb_STATE_">
+                <FinishDest/>
+                <ExceptDest/>
+                <StateBeginTask/>
+                <StateException>
+                    <StateDest/>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel/>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="init" id="TE_bb_STATE_init">
+                <FinishDest>TE_bb_STATE_</FinishDest>
+                <ExceptDest>TE_bb_STATE_</ExceptDest>
+                <StateBeginTask></StateBeginTask>
+                <StateException>
+                    <StateDest>TE_bb_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_Negotiating"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="ready" id="TE_bb_STATE_ready">
+                <FinishDest>TE_bb_STATE_</FinishDest>
+                <ExceptDest>TE_bb_STATE_</ExceptDest>
+                <StateBeginTask></StateBeginTask>
+                <StateException>
+                    <StateDest>TE_bb_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="water" id="TE_bb_STATE_water">
+                <FinishDest>TE_bb_STATE_</FinishDest>
+                <ExceptDest>TE_bb_STATE_</ExceptDest>
+                <StateBeginTask></StateBeginTask>
+                <StateException>
+                    <StateDest>TE_bb_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+        </StateManagerList>
+        <DefaultState>TE_bb_STATE_idle</DefaultState>
+    </Module>
+    <Module name="cc" id="Te_ModuleIdentify_cc">
+        <StateCount>TE_cc_STATE_COUNT</StateCount>
+        <StateJumpMap/>
+        <StateManagerList>
+            <StateManager name="idle" id="TE_cc_STATE_idle">
+                <FinishDest>TE_cc_STATE_</FinishDest>
+                <ExceptDest>TE_cc_STATE_</ExceptDest>
+                <StateBeginTask>NULL</StateBeginTask>
+                <StateException>
+                    <StateDest>TE_cc_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count="2">
+                        <BusinessException>
+                            <BusinessCheck>faa_be1</BusinessCheck>
+                            <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                            <Result>Te_WorkReuslt_Succ</Result>
+                        </BusinessException>
+                        <BusinessException>
+                            <BusinessCheck>faa_be2</BusinessCheck>
+                            <FallbackLevel>Te_FallbackLevel_A</FallbackLevel>
+                            <Result>Te_WorkReuslt_Succ</Result>
+                        </BusinessException>
+                    </BusinessExceptionList>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_Negotiating" step_count="1">
+                    <CooperateStep step_id="0" buff_count="1">
+                        <StateDepend depend_module_id="Te_ModuleIdentify_bb"/>
+                    </CooperateStep>
+                </StateCooperate>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="" id="TE_cc_STATE_">
+                <FinishDest/>
+                <ExceptDest/>
+                <StateBeginTask/>
+                <StateException>
+                    <StateDest/>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel/>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="init" id="TE_cc_STATE_init">
+                <FinishDest>TE_cc_STATE_</FinishDest>
+                <ExceptDest>TE_cc_STATE_</ExceptDest>
+                <StateBeginTask></StateBeginTask>
+                <StateException>
+                    <StateDest>TE_cc_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="ready" id="TE_cc_STATE_ready">
+                <FinishDest>TE_cc_STATE_</FinishDest>
+                <ExceptDest>TE_cc_STATE_</ExceptDest>
+                <StateBeginTask></StateBeginTask>
+                <StateException>
+                    <StateDest>TE_cc_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+            <StateManager name="firewood" id="TE_cc_STATE_firewood">
+                <FinishDest>TE_cc_STATE_</FinishDest>
+                <ExceptDest>TE_cc_STATE_</ExceptDest>
+                <StateBeginTask></StateBeginTask>
+                <StateException>
+                    <StateDest>TE_cc_STATE_</StateDest>
+                    <FallbackLevel/>
+                    <CooperateException>
+                        <FallbackLevel>Te_FallbackLevel_</FallbackLevel>
+                    </CooperateException>
+                    <BusinessExceptionList buff_count=""/>
+                </StateException>
+                <StateCooperate style="Te_StateCooperateStyle_"/>
+                <StateBranchList/>
+                <StateTaskList/>
+            </StateManager>
+        </StateManagerList>
+        <DefaultState>TE_cc_STATE_idle</DefaultState>
+    </Module>
+</SystemDesign>
